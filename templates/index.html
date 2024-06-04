@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendations</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Travel Recommendations</h1>
+        <div class="form-group">
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" required>
+        </div>
+        <div class="form-group">
+            <label for="season">Season</label>
+            <select id="season" name="season" required>
+                <option value="spring">Spring</option>
+                <option value="summer">Summer</option>
+                <option value="fall">Fall</option>
+                <option value="winter">Winter</option>
+            </select>
+        </div>
+        <button id="get-recommendations">Submit</button>
+
+        <div id="status-message" class="status-message"></div>
+        <div id="recommendations" class="recommendations"></div>
+    </div>
+
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>
