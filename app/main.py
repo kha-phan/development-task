@@ -13,7 +13,6 @@ app.include_router(recommendations.router, prefix="/recommendations")
 app.include_router(status.router, prefix="/status")
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
-templates = Jinja2Templates(directory="templates")
 
 
 @app.on_event("startup")
@@ -28,4 +27,5 @@ async def shutdown_event():
 
 @app.get("/")
 async def read_root(request: Request):
+    templates = Jinja2Templates(directory="templates")
     return templates.TemplateResponse("index.html", {"request": request})
